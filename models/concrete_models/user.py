@@ -1,5 +1,6 @@
 from models.model import Model
 
+
 class User(Model):
-    name: str
+    username: str
     email: str
