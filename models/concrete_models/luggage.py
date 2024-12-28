@@ -1,10 +1,7 @@
 
-from models.concrete_models.flightcard import FlightCard
-from models.concrete_models.states import ArriveStates
+from models.concrete_models.arrives import Arrive
 from models.model import Model
 
 
-class Luggage(Model):
-    flightcard: FlightCard
-    states: ArriveStates
+class Luggage(Arrive):
     weight: float
