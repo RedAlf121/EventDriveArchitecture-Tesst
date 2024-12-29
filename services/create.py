@@ -1,3 +1,4 @@
+from models.concrete_models.arrives import Arrive
 from models.concrete_models.flight import Flight
 from models.concrete_models.flightcard import FlightCard
 from models.concrete_models.luggage import Luggage
@@ -17,5 +18,9 @@ def create_flight_card(user, flight):
     return FlightCard(user=user, flight=flight)
 
 @save_model
-def create_luggage(weight):
-    return Luggage(weight=weight)
+def create_luggage(flightcard,weight):
+    return Luggage(flightCard=flightcard,weight=weight)
+
+@save_model
+def create_arrive(flightcard):
+    return Arrive(flightCard=flightcard)

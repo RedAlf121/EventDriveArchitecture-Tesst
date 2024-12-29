@@ -9,4 +9,4 @@ from models.model import Model
 
 class Arrive(Model):
     flightCard: FlightCard
-    state: ArriveStates = field(repr=False,default=ArriveStates.NotChecked)
+    state: ArriveStates = field(init=False,default=ArriveStates.NotChecked)

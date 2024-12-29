@@ -14,3 +14,7 @@ Para la solucion de este ejercicio primero se tuvo que identificar los modelos, 
 [Eventos](./events/Readme.md)
 [Modelos](./models/Readme.md)
 [Servicios](./services/Readme.md)
+
+## EventBus:
+EventBus es un patron de diseño inspirado en el patron Observer. En el cual se va a tener varias funciones suscritas a un evento, cuando este evento es emitido, las funciones suscritas al evento se ejecutan. Existen tecnologias como Kafka y RabbitMQ que aplican este patron a nivel de infraestructura.
+En este proyecto se aplica utilizando un diccionario que revisa si ya esa funcion esta suscrita; si es el caso lo agrega en la lista de suscriptores del evento, sino la crea con la lista con la funcion.
